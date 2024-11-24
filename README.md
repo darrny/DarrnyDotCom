@@ -42,7 +42,7 @@ The portfolio site is designed to be simple yet functional, with the following f
 ### **Step 1: Open the Website**
 
 1. Visit my portfolio:  
-   [DarrnyDotCom](https://darrny.netlify.app) *(example link, update with your real link)*
+   [DarrnyDotCom](https://darrny.netlify.app)
 
 2. Browse through the **About**, **Skills**, **Projects**, and **Contact** sections to get a sense of my work.
 
@@ -76,7 +76,7 @@ The portfolio site is designed to be simple yet functional, with the following f
 
 Here are some visuals of my portfolio:
 
-- **Hero Section (Landing page)**
+- **Hero Section**
    <img width="1512" alt="Screenshot 2024-11-24 at 10 56 23 AM" src="https://github.com/user-attachments/assets/88037556-ff69-4469-a517-8d6559982d6e">
 
 - **Skills Section**  
