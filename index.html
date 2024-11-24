@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darren Lim - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Darren Lim</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects-section">Projects</a> <!-- Changed from #projects to #projects-section -->
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="about" class="hero" data-aos="fade-up">
+        <div class="hero-content">
+            <div data-aos="fade-up">
+              <img src="assets/picture 1.jpeg" alt="Darren Lim" class="profile-pic">
+            </div>
+            <h1>Hi, I'm Darren!</h1>
+            <p class="lead">Computer Science Student at NUS | AI & Cybersecurity Enthusiast | Software Developer at NUS Sheares Web</p>
+            
+            <div class="cta-buttons">
+                <a href="/assets/resume.pdf" class="btn primary-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <a href="mailto:darren.lim.off@gmail.com" class="btn secondary-btn">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/darrny" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/darrny" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid" data-aos="fade-up">
+            <div class="skills-grid" data-aos="fade-up">
+              <div class="skill-card">
+                  <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                  <ul>
+                      <li>React Native</li>
+                      <li>TypeScript</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                  </ul>
+              </div>
+            </div>
+            
+            <div class="skills-grid" data-aos="fade-up">
+              <div class="skill-card">
+                  <h3><i class="fas fa-database"></i> Backend & Database</h3>
+                  <ul>
+                      <li>Firebase</li>
+                      <li>SQL</li>
+                      <li>Python</li>
+                      <li>MongoDB</li>
+                  </ul>
+              </div>
+            </div>
+
+            <div class="skills-grid" data-aos="fade-up">
+              <div class="skill-card">
+                  <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                  <ul>
+                      <li>TabNet</li>
+                      <li>NLTK</li>
+                      <li>Vader Sentiment Analysis</li>
+                      <li>OpenAI</li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects-section" data-aos="fade-up"> <!-- Updated ID for consistency -->
+      <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up">
+                <img src="assets/brainbuddies1.JPEG" alt="BrainBuddies" class="project-img" >
+                <h3>BrainBuddies</h3>
+                <p>A full-stack learning application built with React Native and Firebase, featuring TypeScript integration and comprehensive Jest testing.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Jest</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/darrny/BrainBuddies" class="btn project-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="assets/maritimenavigator1.JPEG" alt="Maritime Navigator" class="project-img">
+                <h3>Maritime Navigator</h3>
+                <p>Deep learning project using TabNet architecture to predict maritime traffic levels based on weather conditions and other factors.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">AI</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">TabNet</span>
+                    <span class="skill-tag">Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/darrny/MaritimeNavigator" class="btn project-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="assets/sentimentanalyser.JPEG" alt="Sentiment Analyser" class="project-img">
+                <h3>Sentiment Analyser</h3>
+                <p>A Natural Language Processing project that analyzes Amazon food reviews using techniques like Vader Sentiment Analysis to classify sentiment effectively.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">VADER</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">NLTK</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/darrny/SentimentAnalyser" class="btn project-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="view-all-container">
+              <a href="https://github.com/darrny" target="_blank" class="btn view-all-btn">
+                  <i class="fab fa-github"></i> View All Projects
+              </a>
+          </div>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <a href="mailto:darren.lim.off@gmail.com" class="contact-item" aria-label="Email">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a href="https://linkedin.com/in/darrny" target="_blank" class="contact-item" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/darrny" target="_blank" class="contact-item" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Darren Lim. All rights reserved, hehe :D</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: false, // Whether animation should happen only once
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #2d3436;
+  line-height: 1.7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+#desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #006633, #004d26);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.nav-links a {
+  color: #006633;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(0, 102, 51, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 2rem 6rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 10s infinite ease-in-out;
+  z-index: 0;
+}
+
+.hero::before {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 51, 0.1), rgba(0, 77, 38, 0.2));
+  top: -150px;
+  left: -200px;
+}
+
+.hero::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 102, 51, 0.2), rgba(0, 77, 38, 0.3));
+  bottom: -100px;
+  right: -150px;
+  animation-delay: 5s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin-bottom: 2.5rem;
+  border: 6px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #2d3436, #006633);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+/* Button Styles */
+.cta-buttons {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #006633, #004d26);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 102, 51, 0.3);
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 51, 0.4);
+}
+
+.primary-btn:active {
+  background: linear-gradient(135deg, #004d26, #00331a); /* Slightly darker green to indicate press */
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2); /* Adds a pressed effect */
+  transform: scale(0.98); /* Optional: Slight shrink effect */
+}
+
+.secondary-btn {
+  background: white;
+  color: #006633;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(135deg, #006633, #004d26);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this under the .social-links section in your CSS */
+.social-links a i {
+  color: #006633;  /* This is the same green used throughout your site */
+}
+
+/* Skills Section */
+#skills {
+  padding: 8rem 2rem;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+  color: #2d3436;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: #006633;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Skill Card Styles */
+.skill-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 2rem; /* Added margin for spacing between cards */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+  color: #006633;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.skill-tag {
+  background: rgba(0, 102, 51, 0.1);
+  color: #006633;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(0, 102, 51, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Projects Section */
+#projects-section {
+  padding-top: 2rem; /* Ensures that the section starts with some padding */
+  scroll-margin-top: 120px; /* Adjust the scroll position to align better when clicked */
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+/* Horizontal layout for desktops/landscape mode */
+@media (min-width: 769px) {
+  .projects-grid {
+    flex-direction: row; /* Align items horizontally */
+  }
+
+  .project-card {
+    flex: 1 1 calc(30% - 2rem); /* Adjust width while maintaining gaps */
+    max-width: 30%; /* Prevents items from growing too large */
+  }
+}
+
+/* Vertical layout for mobile/portrait mode */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column; /* Align items vertically */
+  }
+
+  .project-card {
+    flex: 1 1 100%; /* Full width for each item */
+    max-width: 100%;
+  }
+}
+
+.project-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  background: white;
+  padding-top: 0.75rem; /* Adds space at the top of the card */
+  padding-bottom: 0.75rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  width: 95%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  display: block;
+  border-radius: 12px; /* Adds rounded corners to the image */
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.02); /* Zooms in slightly on hover */
+}
+
+.project-card h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  color: #2d3436;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  padding: 0 1.5rem 1.5rem;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.project-skills {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: #e8f5e9;
+  color: #006633;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: #006633;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-all-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #006633, #004d26);
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  box-shadow: 0 4px 15px rgba(0, 102, 51, 0.3);
+}
+
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 51, 0.4);
+}
+
+.view-all-btn:active {
+  background: linear-gradient(135deg, #004d26, #00331a);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+/* Contact Section */
+#contact {
+  padding: 6rem 2rem;
+  text-align: center; /* Added to center the heading */
+}
+
+.contact-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  max-width: 300px;  /* Reduced from 400px */
+  padding: 1rem 2rem;  /* Reduced from 2rem 3rem */
+  width: 70%;
+  margin: 2rem auto 0; /* Added margin-top to create space below heading */
+}
+
+.contact-container::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, #006633, #004d26);
+  border-radius: 18px;
+  z-index: -1;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.5;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 0.8;
+    filter: blur(10px);
+  }
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;  /* Reduced from 1rem 0 */
+  gap: 1.5rem;  /* Reduced from 2rem if you want icons closer together */
+  padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .skill-card, .project-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-info {
+    padding: 2rem;
+  }
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  background: white;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-item {
+  margin: 0 1rem;
+  color: #2d3436;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.contact-item:hover {
+  color: #006633;
+  transform: scale(1.1);
+}
