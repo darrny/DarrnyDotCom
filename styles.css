@@ -375,7 +375,6 @@ html {
     display: grid;
     justify-content: center;
   }
-  }
 
   .primary-btn, .secondary-btn {
     font-size: 0.8rem; /* Reduce font size */
