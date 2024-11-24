@@ -100,7 +100,7 @@ html {
       transform: translate(0, 0);
     }
     50% {
-      transform: translate(10px, -20px);
+      transform: translate(50px, 50px);
     }
     100% {
       transform: translate(0, 0);
@@ -179,6 +179,73 @@ html {
     overflow: hidden;
   }
 
+  .hero {
+    padding: 5rem 2rem 4rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before,
+  .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 10s infinite ease-in-out;
+    z-index: 0;
+  }
+  
+  /* Larger Circle */
+  .hero::before {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 102, 51, 0.1), rgba(0, 77, 38, 0.2));
+    top: -100px;
+    left: -150px;
+  }
+  
+  /* Smaller Circle */
+  .hero::after {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0, 102, 51, 0.2), rgba(0, 77, 38, 0.3));
+    bottom: -50px;
+    right: -100px;
+    animation-delay: 5s;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, 50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .hero::before {
+      width: 300px;
+      height: 300px;
+      top: -80px;
+      left: -100px;
+    }
+  
+    .hero::after {
+      width: 200px;
+      height: 200px;
+      bottom: -40px;
+      right: -80px;
+    }
+  }
+
   .hero-content {
     position: relative;
     z-index: 1;
@@ -228,10 +295,26 @@ html {
 }
 
 .primary-btn {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
   background: linear-gradient(135deg, #006633, #004d26);
   color: white;
   box-shadow: 0 4px 15px rgba(0, 102, 51, 0.3);
+  border: none; /* Ensure no extra borders affect alignment */
+  padding: 0.8rem 2rem; /* Adjust padding for consistency */
+  font-size: 1rem; /* Adjust font size as needed */
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
   transition: all 0.3s ease;
+  text-decoration: none;
+  width: 220px;
+}
+
+.primary-btn i {
+  margin-right: 0.5rem; /* Add spacing between the icon and text */
 }
 
 .primary-btn:hover {
@@ -246,6 +329,9 @@ html {
 }
 
 .secondary-btn {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
   background: white;
   color: #006633;
   border: 2px solid transparent;
@@ -253,6 +339,19 @@ html {
   background-origin: border-box;
   background-clip: padding-box, border-box;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 2rem; /* Adjust padding for consistency */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: 220px;
+}
+
+.secondary-btn i {
+  margin-right: 0.5rem; /* Add spacing between the icon and text */
 }
 
 .secondary-btn:hover {
@@ -278,6 +377,7 @@ html {
   .primary-btn, .secondary-btn {
     font-size: 0.8rem; /* Reduce font size */
     padding: 0.7rem 1.5rem; /* Adjust padding for smaller font */
+    width: 180px;
   }
 }
 
@@ -530,8 +630,8 @@ html {
 .contact-info {
   display: flex;
   justify-content: center;
-  padding: 0.2rem 0;  /* Reduced from 1rem 0 */
-  gap: 1.5rem;  /* Reduced from 2rem if you want icons closer together */
+  padding: 0.2rem 0; /* Reduced padding */
+  gap: 1.5rem; /* Default spacing between icons */
 }
 
 /* Responsive Design */
@@ -580,6 +680,24 @@ html {
 .social-links img {
   width: 24px;
   height: 24px;
+}
+
+/* Mobile View: Reduce spacing for contact icons */
+@media (max-width: 768px) {
+  .contact-info {
+    gap: 1rem; /* Reduce spacing between icons for mobile view */
+    padding: 0.2rem 0; /* Adjust padding as needed */
+  }
+
+  .social-links {
+    gap: 0.8rem; /* Reduce gap between icons in the social links for mobile */
+    margin-top: 1.5rem; /* Optional: Adjust top margin for better layout */
+  }
+
+  .social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .contact-item {
