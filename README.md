@@ -76,14 +76,14 @@ The portfolio site is designed to be simple yet functional, with the following f
 
 Here are some visuals of my portfolio:
 
-- **Hero Section (Landing page)**  
-  <img width="1512" alt="Screenshot 2024-11-24 at 10 51 47 AM" src="https://github.com/user-attachments/assets/d35d375f-b1f9-4667-ac13-dc2822c47efb">
+- **Hero Section (Landing page)**
+   <img width="1512" alt="Screenshot 2024-11-24 at 10 56 23 AM" src="https://github.com/user-attachments/assets/88037556-ff69-4469-a517-8d6559982d6e">
 
 - **Skills Section**  
-  <img width="1512" alt="Screenshot 2024-11-24 at 10 51 59 AM" src="https://github.com/user-attachments/assets/3f62061b-a29d-420b-8c9f-13e39cd0c54e">
+   <img width="1512" alt="Screenshot 2024-11-24 at 10 56 28 AM" src="https://github.com/user-attachments/assets/b4fd7af9-bdd5-4351-b027-f6b5aaa9855a">
 
 - **Projects Section**  
-  <img width="1512" alt="Screenshot 2024-11-24 at 10 52 04 AM" src="https://github.com/user-attachments/assets/c916cd0a-bcc5-4a13-8c55-c66ac49ff49b">
+   <img width="1512" alt="Screenshot 2024-11-24 at 10 56 33 AM" src="https://github.com/user-attachments/assets/49680f3c-ba75-469e-86a8-52ae14dbb8c7">
 
 ---
 
