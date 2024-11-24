@@ -200,7 +200,7 @@ html {
 @media (max-width: 768px) {
   /* Stack the logo and nav links vertically */
   #desktop-nav {
-    flex-direction: column; /* Stack logo and nav links in a column for mobile */
+    flex-direction: row; /* Stack logo and nav links in a column for mobile */
     align-items: center;
     padding: 7px;
   }
@@ -228,6 +228,24 @@ html {
     background-color: rgba(0, 102, 51, 0.1);
     transform: translateY(-1px);
   }
+  
+  .social-links {
+    justify-content: center; /* Center the icons on mobile */
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Ensures all content in hero-text is centered */
+      text-align: center;
+  }
+
+  .social-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
 
   /* Hero Section */
   .hero {
@@ -237,15 +255,6 @@ html {
     position: relative;
     overflow: hidden;
   }
-
-  .hero {
-    padding: 5rem 2rem 4rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-  
   .hero::before,
   .hero::after {
     content: '';
@@ -343,6 +352,49 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  color: #006633;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-indicator i {
+  font-size: 2rem;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.scroll-indicator:hover i {
+  color: #004d26;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) translateX(-50%);
+  }
+  40% {
+      transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+      transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+      bottom: 1rem;  /* Slightly higher on mobile */
+  }
+  
+  .scroll-indicator i {
+      font-size: 1.5rem;  /* Smaller icon on mobile */
   }
 }
 

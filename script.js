@@ -5,3 +5,8 @@ function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+
+document.querySelector('.scroll-indicator').addEventListener('click', function() {
+    const skillsSection = document.getElementById('skills');
+    skillsSection.scrollIntoView({ behavior: 'smooth' });
+});
