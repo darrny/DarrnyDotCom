@@ -44,8 +44,8 @@ The portfolio site is designed to be simple yet functional, with the following f
 1. Visit my portfolio:  
    [DarrnyDotCom](https://darrny.netlify.app)
 
-2. Browse through the **About**, **Skills**, **Projects**, and **Contact** sections to get a sense of my work.
-3. Hire me, please 🙏
+2. Browse through the **About**, **Skills**, **Projects**, and **Contact** sections and be impressed!
+3. Hire me, please !!! 🙏
 
 ### **Step 2: Explore Projects**
 
