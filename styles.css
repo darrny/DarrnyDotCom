@@ -377,7 +377,7 @@ html {
   .primary-btn, .secondary-btn {
     font-size: 0.8rem; /* Reduce font size */
     padding: 0.7rem 1.5rem; /* Adjust padding for smaller font */
-    width: 180px;
+    width: 200px;
   }
 }
 
