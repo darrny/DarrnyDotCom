@@ -35,96 +35,178 @@ html {
   letter-spacing: -0.5px;
 }
 
-.nav-links a {
-  color: #006633;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-  background-color: rgba(0, 102, 51, 0.1);
-  transform: translateY(-1px);
-}
-
-/* Hero Section */
-.hero {
-  padding: 8rem 2rem 6rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before,
-.hero::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.6;
-  animation: float 10s infinite ease-in-out;
-  z-index: 0;
-}
-
-.hero::before {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0, 102, 51, 0.1), rgba(0, 77, 38, 0.2));
-  top: -150px;
-  left: -200px;
-}
-
-.hero::after {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0, 102, 51, 0.2), rgba(0, 77, 38, 0.3));
-  bottom: -100px;
-  right: -150px;
-  animation-delay: 5s;
-}
-
-/* Floating animation */
-@keyframes float {
-  0% {
-    transform: translate(0, 0);
+/* Desktop View */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding-bottom: 0; /* Remove extra padding on desktop */
   }
-  50% {
-    transform: translate(10px, -20px);
+
+  .nav-links a {
+    color: #006633;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
   }
-  100% {
-    transform: translate(0, 0);
+
+  .nav-links a:hover {
+    background-color: rgba(0, 102, 51, 0.1);
+    transform: translateY(-1px);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 8rem 2rem 6rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before,
+  .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 10s infinite ease-in-out;
+    z-index: 0;
+  }
+
+  .hero::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 102, 51, 0.1), rgba(0, 77, 38, 0.2));
+    top: -150px;
+    left: -200px;
+  }
+
+  .hero::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 102, 51, 0.2), rgba(0, 77, 38, 0.3));
+    bottom: -100px;
+    right: -150px;
+    animation-delay: 5s;
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, -20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-bottom: 2.5rem;
+    border: 6px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .profile-pic:hover {
+    transform: scale(1.05); /* Slight hover effect */
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #2d3436, #006633);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
   }
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
+/* Mobile View */
+@media (max-width: 768px) {
+  /* Stack the logo and nav links vertically */
+  #desktop-nav {
+    flex-direction: column; /* Stack logo and nav links in a column for mobile */
+    align-items: center;
+    padding: 10px;
+  }
 
-.profile-pic {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  margin-bottom: 2.5rem;
-  border: 6px solid white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 100%; /* Take up full width on small screens */
+    text-align: center; /* Center the links */
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap when needed */
+    padding-bottom: 10px; /* Added bottom padding */
+  }
 
-.profile-pic:hover {
-  transform: scale(1.05); /* Slight hover effect */
-}
+  .nav-links a {
+    color: #006633;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #2d3436, #006633);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -1px;
+  .nav-links a:hover {
+    background-color: rgba(0, 102, 51, 0.1);
+    transform: translateY(-1px);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 8rem 2rem 6rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Center content for mobile */
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-bottom: 2.5rem;
+    border: 6px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .profile-pic:hover {
+    transform: scale(1.05); /* Slight hover effect */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    font-weight: 700;
+    background: linear-gradient(135deg, #2d3436, #006633);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+  }
 }
 
 /* Button Styles */
@@ -178,11 +260,6 @@ html {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Add this under the .social-links section in your CSS */
-.social-links a i {
-  color: #006633;  /* This is the same green used throughout your site */
-}
-
 /* Skills Section */
 #skills {
   padding: 8rem 2rem;
@@ -210,7 +287,6 @@ html {
   border-radius: 2px;
 }
 
-/* Skill Card Styles */
 .skill-card {
   background: white;
   padding: 2.5rem;
