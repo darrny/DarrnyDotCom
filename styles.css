@@ -271,8 +271,8 @@ html {
   }
 
   .primary-btn, .secondary-btn {
-    font-size: 0.6rem; /* Reduce font size */
-    padding: 0.6rem 1.2rem; /* Adjust padding for smaller font */
+    font-size: 0.75rem; /* Reduce font size */
+    padding: 0.7rem 1.5rem; /* Adjust padding for smaller font */
   }
 }
 
