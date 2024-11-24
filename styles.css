@@ -372,6 +372,9 @@ html {
 @media (max-width: 768px) {
   .cta-buttons {
     gap: 0.6rem; /* Slightly smaller gap for mobile view */
+    display: grid;
+    justify-content: center;
+  }
   }
 
   .primary-btn, .secondary-btn {
