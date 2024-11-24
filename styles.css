@@ -172,7 +172,7 @@ html {
 
   /* Hero Section */
   .hero {
-    padding: 4rem 2rem 6rem;
+    padding: 5rem 2rem 4rem;
     background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
     min-height: 100vh;
     position: relative;
