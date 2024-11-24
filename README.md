@@ -1,6 +1,6 @@
-# **Darren Lim - Portfolio 🌐**
+# **DarrnyDotCom 🌐**
 
-**Darren Lim's Portfolio** is a personal website showcasing my work, skills, and achievements as a Computer Science student at NUS. This site highlights various projects, including **AI** and **Cybersecurity** work, and offers insights into my technical skillset, including frontend and backend development, AI & Machine Learning, and more. 
+**DarrnyDotCom** is a personal website showcasing my work, skills, and achievements as a Computer Science student at NUS. This site highlights various projects, including **AI** and **Cybersecurity** work, and offers insights into my technical skillset, including frontend and backend development, AI & Machine Learning, and more. 
 
 ---
 
