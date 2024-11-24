@@ -107,9 +107,32 @@ html {
     }
   }
 
+  .hero {
+    padding: 0;
+    min-height: calc(100vh); /* Subtract nav height */
+    display: flex;
+    align-items: center;
+  }
+
   .hero-content {
-    position: relative;
-    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .hero-text {
+    padding-left: 4rem;
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
   }
 
   .profile-pic {
@@ -122,20 +145,56 @@ html {
     transition: transform 0.3s ease;
   }
 
+  .lead {
+    font-size: 1.5rem;
+    color: #4a5568;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+
+  .profile-pic-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 450px;
+    height: 450px;
+    margin: 0;
+    object-fit: cover;
+    border-width: 8px;
+  }
+
   .profile-pic:hover {
     transform: scale(1.05); /* Slight hover effect */
   }
 
-  .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #2d3436, #006633);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -1px;
+  .cta-buttons {
+    margin: 2.5rem 0;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .social-links {
+    margin-top: 2rem;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .social-links a {
+    padding: 0.75rem;
+  }
+
+  .social-links a i {
+    font-size: 1.5rem;
   }
 }
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -247,16 +306,27 @@ html {
   }
 
   .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center; /* Center content for mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .profile-pic-container {
+    order: -1; /* This moves the image to the top */
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-text {
+    width: 100%;
   }
 
   .profile-pic {
-    width: 220px;
-    height: 220px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     border: 6px solid white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
