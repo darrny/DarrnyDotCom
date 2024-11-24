@@ -163,8 +163,8 @@ html {
   }
 
   .profile-pic {
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     margin: 0;
     object-fit: cover;
     border-width: 8px;
