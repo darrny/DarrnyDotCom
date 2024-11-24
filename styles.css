@@ -713,3 +713,25 @@ html {
   color: #006633;
   transform: scale(1.1);
 }
+
+footer {
+  text-align: center;
+  font-size: 0.9rem; /* Adjust font size as needed */
+  color: #2d3436;
+  padding: 2rem 1rem; /* Add some spacing for clarity */
+  background-color: #fafafa; /* Optional: Add a background color for contrast */
+  margin-top: 2rem; /* Add space above the footer */
+}
+
+footer::before {
+  content: '';
+  display: block;
+  width: 80%; /* Adjust width of the divider */
+  height: 1px;
+  background: #e0e0e0; /* Light gray divider color */
+  margin: 0 auto 1rem; /* Center the divider and add spacing below */
+}
+
+footer p {
+  margin: 0;
+}
