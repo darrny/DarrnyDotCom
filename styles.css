@@ -260,6 +260,22 @@ html {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+.social-links a i {
+  color: #006633; 
+}
+
+/* Mobile View: Reduce font size for buttons */
+@media (max-width: 768px) {
+  .cta-buttons {
+    gap: 0.6rem; /* Slightly smaller gap for mobile view */
+  }
+
+  .primary-btn, .secondary-btn {
+    font-size: 0.6rem; /* Reduce font size */
+    padding: 0.6rem 1.2rem; /* Adjust padding for smaller font */
+  }
+}
+
 /* Skills Section */
 #skills {
   padding: 8rem 2rem;
@@ -509,9 +525,8 @@ html {
 .contact-info {
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;  /* Reduced from 1rem 0 */
+  padding: 0.2rem 0;  /* Reduced from 1rem 0 */
   gap: 1.5rem;  /* Reduced from 2rem if you want icons closer together */
-  padding: 1rem 0;
 }
 
 /* Responsive Design */
@@ -529,21 +544,21 @@ html {
   }
   
   .contact-info {
-    padding: 2rem;
+    padding: 0.5rem;
   }
 }
 
 /* Social Links */
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   justify-content: center;
   margin-top: 2rem;
 }
 
 .social-links a {
   background: white;
-  padding: 0.8rem;
+  padding: 0.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
