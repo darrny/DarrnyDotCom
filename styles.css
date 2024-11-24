@@ -388,7 +388,7 @@ html {
   }
 }
 
-/* Skills Section */
+/*Skills Section Styles */
 #skills {
   padding: 8rem 2rem;
   background: white;
@@ -422,11 +422,11 @@ html {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   border: 1px solid #f0f0f0;
-  margin-bottom: 2rem; /* Added margin for spacing between cards */
+  margin-bottom: 2rem;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px); /* Slight hover effect */
+  transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -435,7 +435,30 @@ html {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Added space between icon and text */
 }
+
+.skill-card ul {
+  list-style: none;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.skill-card li {
+  position: relative;
+  padding: 0.5rem 0;
+  color: #2d3436;
+}
+
+.skill-card li::before {
+  content: "•";
+  color: #006633;
+  position: absolute;
+  left: -1rem;
+}
+
 
 .skill-tags {
   display: flex;
