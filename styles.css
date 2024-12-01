@@ -483,7 +483,7 @@ html {
 
 /* Projects Section */
 #projects-section {
-  padding-top: 2rem; /* Ensures that the section starts with some padding */
+  padding-top: 8rem 2rem; /* Ensures that the section starts with some padding */
   scroll-margin-top: 120px; /* Adjust the scroll position to align better when clicked */
 }
 
@@ -514,8 +514,8 @@ html {
   }
 
   .project-card {
-    flex: 1 1 100%; /* Full width for each item */
-    max-width: 100%;
+    width: 89%; /* 87% width for mobile */
+    margin: 0 auto; /* Center the cards */
   }
 }
 
@@ -651,7 +651,7 @@ html {
   background: #aaaaaa;
   border-radius: 18px;
   z-index: -1;
-  animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 4s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
