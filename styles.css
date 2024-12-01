@@ -689,49 +689,51 @@ footer p {
     letter-spacing: -1px;
   }
 
+  /* Profile Picture Container */
   .profile-pic-container {
-    order: -1; /* Moves the image to the top */
+    order: -1;
     margin-bottom: 2.5rem;
     position: relative; /* Necessary for overlaying the video */
     width: 250px;
     height: 250px;
-    overflow: hidden; /* Ensures no content exceeds the circular boundary */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer; /* Indicate that it's clickable */
   }
 
   .profile-pic {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      box-shadow: 0 10px 20px #222222;
-      mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-      -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-      transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
-      z-index: 2; /* Ensure it appears above the video initially */
-  }
-
-  .profile-pic-container:hover .profile-pic {
-      opacity: 0; /* Smoothly fade out the profile picture on hover */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px #222222;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 2; /* Ensure it appears above the video initially */
   }
 
   .profile-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      opacity: 0; /* Initially hidden */
-      transition: opacity 0.5s ease; /* Smooth transition for fading in */
-      z-index: 1; /* Video stays below the image initially */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+    z-index: 1; /* Video stays below the image initially */
   }
 
-  .profile-pic-container:hover .profile-video {
-      opacity: 1; /* Smoothly fade in the video on hover */
-      z-index: 2; /* Bring the video above the fading image */
+  .profile-pic-container.clicked .profile-pic {
+    opacity: 0; /* Fade out the profile picture */
+  }
+
+  .profile-pic-container.clicked .profile-video {
+    opacity: 1; /* Fade in the video */
+    z-index: 2; /* Bring the video above the profile picture */
   }
 
   .lead {

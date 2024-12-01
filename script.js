@@ -35,15 +35,13 @@ if (!isMobile) {
 if (isMobile) {
     // Handle click event on the profile picture
     profilePic.addEventListener("click", () => {
-        profilePic.style.opacity = 0; // Fade out the profile picture
-        profileVideo.style.opacity = 1; // Fade in the video
+        profilePicContainer.classList.add('clicked'); // Add 'clicked' class to show the video
         profileVideo.play(); // Start playing the video
     });
 
     // Handle click event on the video
     profileVideo.addEventListener("click", () => {
-        profilePic.style.opacity = 1; // Fade in the profile picture
-        profileVideo.style.opacity = 0; // Fade out the video
+        profilePicContainer.classList.remove('clicked'); // Remove 'clicked' class to show the profile picture again
         profileVideo.pause(); // Pause the video
         profileVideo.currentTime = 0; // Reset the video to the beginning
     });
