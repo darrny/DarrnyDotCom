@@ -386,15 +386,9 @@ html {
   }
 }
 
-/*Skills Section Styles */
-#skills {
-  padding: 8rem 2rem;
-  background: #000000;
-}
-
 .section-title {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 4rem;
   font-weight: 700;
   color: #ffffff;
@@ -411,6 +405,60 @@ html {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
+}
+
+/* About Me Section */
+#about-me {
+  padding: 8rem 2rem; /* Add spacing around the section */
+  background: #000000; /* Slightly lighter black background for contrast */
+}
+
+.about-me-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #eeeeee; /* Subtle text color */
+  line-height: 1.8;
+}
+
+.about-me-content p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #cccccc; /* Subtle paragraph text color */
+}
+
+.about-me-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White headings */
+}
+
+.coursework-list,
+.hackathon-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.coursework-list li,
+.hackathon-list li {
+  padding: 0.5rem 0;
+  position: relative;
+  color: #dddddd; /* Subtle list item color */
+  font-size: 1rem;
+}
+
+.coursework-list li::before,
+.hackathon-list li::before {
+  content: "•";
+  color: #ffffff; /* White bullet points */
+  position: absolute;
+  left: -1.5rem;
+}
+
+/*Skills Section Styles */
+#skills {
+  padding: 8rem 2rem;
+  background: #000000;
 }
 
 .skill-card {
@@ -431,7 +479,7 @@ html {
 .skill-card h3 {
   color: #FFFFFF;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -640,34 +688,13 @@ html {
 }
 
 .contact-container {
-  background: #222222;
+  background: #333333;
   border-radius: 16px;
   position: relative;
   max-width: 300px;  /* Reduced from 400px */
   padding: 1rem 2rem;  /* Reduced from 2rem 3rem */
   width: 70%;
   margin: 2rem auto 0; /* Added margin-top to create space below heading */
-}
-
-.contact-container::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  background: #aaaaaa;
-  border-radius: 18px;
-  z-index: -1;
-  animation: glow 4s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    opacity: 0.0;
-    filter: blur(3px);
-  }
-  to {
-    opacity: 0.8;
-    filter: blur(5px);
-  }
 }
 
 .contact-info {
@@ -745,7 +772,7 @@ html {
 
 .contact-item {
   margin: 0 1rem;
-  color: #aaaaaa;
+  color: #bbbbbb;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
 }
