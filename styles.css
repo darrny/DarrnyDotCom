@@ -714,19 +714,21 @@ footer p {
     z-index: 2; /* Ensure it appears above the video initially */
   }
 
+  /* Profile Video */
   .profile-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%; /* Circular border like profile picture */
+    object-fit: cover; /* Ensure the video covers the whole area */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease;
     z-index: 1; /* Video stays below the image initially */
   }
 
+  /* When clicked, show the video */
   .profile-pic-container.clicked .profile-pic {
     opacity: 0; /* Fade out the profile picture */
   }
