@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #fafafa;
+  background: #111111;
   color: #2d3436;
   line-height: 1.7;
 }
@@ -26,42 +26,12 @@ html {
   padding: 20px;
 }
 
-.logo {
-  font-size: 1.75rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #006633, #004d26);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.5px;
-}
-
 /* Desktop View */
 @media (min-width: 769px) {
-  .nav-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    padding-bottom: 0; /* Remove extra padding on desktop */
-  }
-
-  .nav-links a {
-    color: #006633;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    background-color: rgba(0, 102, 51, 0.1);
-    transform: translateY(-1px);
-  }
-
   /* Hero Section */
   .hero {
     padding: 8rem 2rem 6rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    background: #111111;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -73,14 +43,14 @@ html {
     position: absolute;
     border-radius: 50%;
     opacity: 0.6;
-    animation: float 10s infinite ease-in-out;
+    animation: float 15s infinite ease-in-out;
     z-index: 0;
   }
 
   .hero::before {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 102, 51, 0.1), rgba(0, 77, 38, 0.2));
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #222222, #333333);
     top: -150px;
     left: -200px;
   }
@@ -88,8 +58,8 @@ html {
   .hero::after {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0, 102, 51, 0.2), rgba(0, 77, 38, 0.3));
-    bottom: -100px;
+    background: radial-gradient(circle, #222222, #333333);
+    bottom: 100px;
     right: -150px;
     animation-delay: 5s;
   }
@@ -127,6 +97,7 @@ html {
   .hero-text {
     padding-left: 4rem;
     max-width: 600px;
+    color: #FFFFFF;
   }
 
   .hero h1 {
@@ -140,14 +111,14 @@ html {
     height: 220px;
     border-radius: 50%;
     margin-bottom: 2.5rem;
-    border: 6px solid white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    box-shadow: 0 10px 20px #222222;
     transition: transform 0.3s ease;
   }
 
   .lead {
     font-size: 1.5rem;
-    color: #4a5568;
+    color: #AAAAAA;
     margin-bottom: 2.5rem;
     line-height: 1.5;
   }
@@ -204,30 +175,6 @@ html {
     align-items: center;
     padding: 7px;
   }
-
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    flex: 1 1 100%; /* Take up full width on small screens */
-    text-align: center; /* Center the links */
-    gap: 1rem;
-    flex-wrap: wrap; /* Allow items to wrap when needed */
-    padding-bottom: 10px; /* Added bottom padding */
-  }
-
-  .nav-links a {
-    color: #006633;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    background-color: rgba(0, 102, 51, 0.1);
-    transform: translateY(-1px);
-  }
   
   .social-links {
     justify-content: center; /* Center the icons on mobile */
@@ -240,6 +187,7 @@ html {
       flex-direction: column;
       align-items: center; /* Ensures all content in hero-text is centered */
       text-align: center;
+      color: #FFFFFF;
   }
 
   .social-links a:hover {
@@ -250,7 +198,7 @@ html {
   /* Hero Section */
   .hero {
     padding: 5rem 2rem 4rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    background: #111111;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -261,7 +209,7 @@ html {
     position: absolute;
     border-radius: 50%;
     opacity: 0.6;
-    animation: float 10s infinite ease-in-out;
+    animation: float 15s infinite ease-in-out;
     z-index: 0;
   }
   
@@ -269,7 +217,7 @@ html {
   .hero::before {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0, 102, 51, 0.1), rgba(0, 77, 38, 0.2));
+    background: radial-gradient(circle, #222222, #333333);
     top: -100px;
     left: -150px;
   }
@@ -278,7 +226,7 @@ html {
   .hero::after {
     width: 250px;
     height: 250px;
-    background: radial-gradient(circle, rgba(0, 102, 51, 0.2), rgba(0, 77, 38, 0.3));
+    background: radial-gradient(circle, #222222, #333333);
     bottom: -50px;
     right: -100px;
     animation-delay: 5s;
@@ -309,7 +257,7 @@ html {
     .hero::after {
       width: 200px;
       height: 200px;
-      bottom: -40px;
+      bottom: 80px;
       right: -80px;
     }
   }
@@ -336,8 +284,8 @@ html {
     height: 270px;
     border-radius: 50%;
     margin-bottom: 0rem;
-    border: 6px solid white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    box-shadow: 0 10px 20px #222222;
     transition: transform 0.3s ease;
   }
 
@@ -345,12 +293,16 @@ html {
     transform: scale(1.05); /* Slight hover effect */
   }
 
+  .lead {
+    font-size: 0.8rem;
+    color: #AAAAAA;
+    margin-bottom: 0.9rem;
+    line-height: 1.5;
+  }
+
   .hero h1 {
     font-size: 2.5rem; /* Smaller font size for mobile */
     font-weight: 700;
-    background: linear-gradient(135deg, #2d3436, #006633);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
   }
 }
@@ -360,8 +312,8 @@ html {
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  animation: bounce 2s infinite;
-  color: #006633;
+  animation: bounce 3s infinite;
+  color: #444444;
   cursor: pointer;
   z-index: 10;
 }
@@ -373,7 +325,7 @@ html {
 }
 
 .scroll-indicator:hover i {
-  color: #004d26;
+  color: #555555;
 }
 
 @keyframes bounce {
@@ -417,7 +369,7 @@ html {
 }
 
 .project-btn {
-  color:#006633;
+  color:#dddddd;
   text-transform: initial;
 }
 
@@ -425,9 +377,9 @@ html {
   display: flex; /* Use flexbox for alignment */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
-  background: linear-gradient(135deg, #006633, #004d26);
+  background: linear-gradient(135deg, #333333, #333333);
   color: white;
-  box-shadow: 0 4px 15px rgba(0, 102, 51, 0.3);
+  box-shadow: 0 4px 15px #111111;
   border: none; /* Ensure no extra borders affect alignment */
   padding: 0.8rem 2rem; /* Adjust padding for consistency */
   font-size: 1rem; /* Adjust font size as needed */
@@ -446,11 +398,11 @@ html {
 
 .primary-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 102, 51, 0.4);
+  box-shadow: 0 6px 20px #333333;
 }
 
 .primary-btn:active {
-  background: linear-gradient(135deg, #004d26, #00331a); /* Slightly darker green to indicate press */
+  background: linear-gradient(135deg, #333333, #333333); /* Slightly darker green to indicate press */
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2); /* Adds a pressed effect */
   transform: scale(0.98); /* Optional: Slight shrink effect */
 }
@@ -460,9 +412,9 @@ html {
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   background: white;
-  color: #006633;
+  color: #333333;
   border: 2px solid transparent;
-  background-image: linear-gradient(white, white), linear-gradient(135deg, #006633, #004d26);
+  background-image: linear-gradient(white, white), linear-gradient(135deg, #333333, #333333);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -488,11 +440,11 @@ html {
 
 .secondary-btn:active{
   transform: scale(0.98); /* Optional: Slight shrink effect */
-  background-color: #e8f5e9;
+  background-color: #dddddd;
 }
 
 .social-links a i {
-  color: #006633; 
+  color: #333333; 
 }
 
 /* Mobile View: Reduce font size for buttons */
@@ -513,7 +465,7 @@ html {
 /*Skills Section Styles */
 #skills {
   padding: 8rem 2rem;
-  background: white;
+  background: #111111;
 }
 
 .section-title {
@@ -521,7 +473,7 @@ html {
   font-size: 2.5rem;
   margin-bottom: 4rem;
   font-weight: 700;
-  color: #2d3436;
+  color: #ffffff;
   position: relative;
 }
 
@@ -530,7 +482,7 @@ html {
   position: absolute;
   width: 60px;
   height: 4px;
-  background: #006633;
+  background: #cccccc;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
@@ -538,12 +490,12 @@ html {
 }
 
 .skill-card {
-  background: white;
+  background: #222222;
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
-  border: 1px solid #f0f0f0;
+  border: 0px solid #cccccc;
   margin-bottom: 2rem;
 }
 
@@ -553,7 +505,7 @@ html {
 }
 
 .skill-card h3 {
-  color: #006633;
+  color: #FFFFFF;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -571,12 +523,12 @@ html {
 .skill-card li {
   position: relative;
   padding: 0.5rem 0;
-  color: #2d3436;
+  color: #eeeeee;
 }
 
 .skill-card li::before {
   content: "•";
-  color: #006633;
+  color: #ffffff;
   position: absolute;
   left: -1rem;
 }
@@ -587,11 +539,12 @@ html {
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0 1.5rem 1.5rem;
+  color: #555555
 }
 
 .skill-tag {
-  background: rgba(0, 102, 51, 0.1);
-  color: #006633;
+  background: #dddddd;
+  color: #dddddd;
   padding: 0.25rem 0.75rem;
   border-radius: 16px;
   font-size: 0.85rem;
@@ -600,7 +553,7 @@ html {
 }
 
 .skill-tag:hover {
-  background: rgba(0, 102, 51, 0.2);
+  background: #eeeeee;
   transform: translateY(-1px);
 }
 
@@ -647,8 +600,8 @@ html {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
-  border: 1px solid #f0f0f0;
-  background: white;
+  border: 0px solid #f0f0f0;
+  background: #222222;
   padding-top: 0.75rem; /* Adds space at the top of the card */
   padding-bottom: 0.75rem;
 }
@@ -675,14 +628,14 @@ html {
 
 .project-card h3 {
   padding: 1.5rem 1.5rem 0.5rem;
-  color: #2d3436;
+  color: #eeeeee;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 .project-card p {
   padding: 0 1.5rem 1.5rem;
-  color: #666;
+  color: #dddddd;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -695,8 +648,8 @@ html {
 }
 
 .skill-tag {
-  background: #e8f5e9;
-  color: #006633;
+  background: #333333;
+  color: #eeeeee;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -705,7 +658,7 @@ html {
 }
 
 .skill-tag:hover {
-  background: #006633;
+  background: #444444;
   color: white;
   transform: translateY(-2px);
 }
@@ -717,7 +670,7 @@ html {
 
 .view-all-btn {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #006633, #004d26);
+  background: #333333;
   color: white;
   font-weight: 500;
   border-radius: 8px;
@@ -727,12 +680,12 @@ html {
   display: inline-block;
   transition: all 0.3s ease;
   text-decoration: none; /* Remove underline */
-  box-shadow: 0 4px 15px rgba(0, 102, 51, 0.3);
+  box-shadow: 0 2px 10px #dddddd26;
 }
 
 .view-all-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 102, 51, 0.4);
+  box-shadow: 0 6px 20px #333333;
 }
 
 .view-all-btn:active {
@@ -748,7 +701,7 @@ html {
 }
 
 .contact-container {
-  background: white;
+  background: #222222;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   position: relative;
@@ -762,7 +715,7 @@ html {
   content: '';
   position: absolute;
   inset: -3px;
-  background: linear-gradient(135deg, #006633, #004d26);
+  background: linear-gradient(135deg, #ffffff45, #ffffff45);
   border-radius: 18px;
   z-index: -1;
   animation: glow 2s ease-in-out infinite alternate;
@@ -854,22 +807,22 @@ html {
 
 .contact-item {
   margin: 0 1rem;
-  color: #2d3436;
+  color: #aaaaaa;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
 }
 
 .contact-item:hover {
-  color: #006633;
+  color: #eeeeee;
   transform: scale(1.1);
 }
 
 footer {
   text-align: center;
   font-size: 0.9rem; /* Adjust font size as needed */
-  color: #2d3436;
+  color: #eeeeee;
   padding: 2rem 1rem; /* Add some spacing for clarity */
-  background-color: #fafafa; /* Optional: Add a background color for contrast */
+  background-color: #111111; /* Optional: Add a background color for contrast */
   margin-top: 2rem; /* Add space above the footer */
 }
 
@@ -878,7 +831,7 @@ footer::before {
   display: block;
   width: 80%; /* Adjust width of the divider */
   height: 1px;
-  background: #e0e0e0; /* Light gray divider color */
+  background: #dddddd; /* Light gray divider color */
   margin: 0 auto 1rem; /* Center the divider and add spacing below */
 }
 
