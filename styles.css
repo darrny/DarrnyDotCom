@@ -414,7 +414,7 @@ html {
 }
 
 .about-me-content {
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
   color: #eeeeee; /* Subtle text color */
   line-height: 1.8;
@@ -435,7 +435,7 @@ html {
 .coursework-list,
 .hackathon-list {
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin-bottom: 2rem;
 }
 
