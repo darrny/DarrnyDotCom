@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -31,50 +32,10 @@ html {
   /* Hero Section */
   .hero {
     padding: 8rem 2rem 6rem;
-    background: #111111;
+    background: #000000;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-  }
-
-  .hero::before,
-  .hero::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: float 15s infinite ease-in-out;
-    z-index: 0;
-  }
-
-  .hero::before {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #222222, #333333);
-    top: -150px;
-    left: -200px;
-  }
-
-  .hero::after {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #222222, #333333);
-    bottom: 100px;
-    right: -150px;
-    animation-delay: 5s;
-  }
-
-  /* Floating animation */
-  @keyframes float {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(50px, 50px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
   }
 
   .hero {
@@ -111,7 +72,7 @@ html {
     height: 220px;
     border-radius: 50%;
     margin-bottom: 2.5rem;
-    border: 4px solid white;
+    border: 0px solid white;
     box-shadow: 0 10px 20px #222222;
     transition: transform 0.3s ease;
   }
@@ -198,51 +159,10 @@ html {
   /* Hero Section */
   .hero {
     padding: 5rem 2rem 4rem;
-    background: #111111;
+    background: #000000;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-  }
-  .hero::before,
-  .hero::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: float 15s infinite ease-in-out;
-    z-index: 0;
-  }
-  
-  /* Larger Circle */
-  .hero::before {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #222222, #333333);
-    top: -100px;
-    left: -150px;
-  }
-  
-  /* Smaller Circle */
-  .hero::after {
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, #222222, #333333);
-    bottom: -50px;
-    right: -100px;
-    animation-delay: 5s;
-  }
-  
-  /* Floating Animation */
-  @keyframes float {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(50px, 50px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
   }
   
   /* Mobile Adjustments */
@@ -689,7 +609,7 @@ html {
 }
 
 .view-all-btn:active {
-  background: linear-gradient(135deg, #004d26, #00331a);
+  background: #222222;
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
   transform: scale(0.98);
 }
