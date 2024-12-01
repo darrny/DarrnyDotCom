@@ -283,14 +283,6 @@ html {
   font-size: 1rem;
 }
 
-.coursework-list li::before,
-.hackathon-list li::before {
-  content: "•";
-  color: #ffffff; /* White bullet points */
-  position: absolute;
-  left: -1.5rem;
-}
-
 .coursework-list a {
   color: #dddddd; /* Subtle text color */
   text-decoration: none; /* Remove underline */
@@ -302,6 +294,65 @@ html {
 .coursework-list a:hover {
   color: #ffffff; /* Hover effect to change color */
   text-decoration: underline; /* Optional: Underline on hover */
+}
+
+/* Experiences Section */
+#experiences {
+  padding: 8rem 2rem; /* Add spacing around the section */
+  background: #000000; /* Slightly lighter black background for contrast */
+}
+
+.experience-content {
+  max-width: 90%;
+  margin: 0 auto;
+  color: #eeeeee; /* Subtle text color */
+  line-height: 1.8;
+}
+
+.experience-content p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #cccccc; /* Subtle paragraph text color */
+}
+
+.experience-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White heading */
+}
+
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3rem;
+  display: flex; /* Use flexbox for dynamic width */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 1rem; /* Add space between chips */
+}
+
+.skill-tag {
+  background: #333333; /* Dark background for tags */
+  color: #ffffff; /* White text */
+  padding: 0.3rem 1rem;
+  border-radius: 20px; /* Rounded corners */
+  font-size: 0.9rem; /* Smaller text for skills */
+  font-weight: 500;
+  transition: background 0.3s ease;
+  display: inline-block; /* Ensures tags only take as much width as the content */
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+.skill-tag:hover {
+  background: #444444; /* Slightly lighter background on hover */
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens, make skills list a single column */
+  .skills-list {
+    flex-direction: row; /* Stack items vertically on smaller screens */
+  }
 }
 
 /*Skills Section Styles */
@@ -493,7 +544,6 @@ html {
   color: white;
   font-weight: 500;
   border-radius: 16px;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 1rem;
   display: inline-block;
@@ -592,17 +642,6 @@ footer p {
     padding: 0.7rem 1.5rem; /* Adjust padding for smaller font */
     width: 200px;
   }
-  
-  .social-links {
-    justify-content: center; /* Center the icons on mobile */
-    gap: 0.8rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
 
   /* Hero Section */
   .hero {
@@ -645,7 +684,7 @@ footer p {
   }
 
   .hero h1 {
-    font-size: 1.5rem; /* Smaller font size for mobile */
+    font-size: 2.0rem; /* Smaller font size for mobile */
     font-weight: 700;
     letter-spacing: -1px;
   }
