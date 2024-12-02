@@ -78,13 +78,19 @@ The portfolio site is designed to be simple yet functional, with the following f
 Here are some visuals of my portfolio:
 
 - **Hero Section**
-   <img width="1512" alt="Screenshot 2024-11-24 at 8 03 07 PM" src="https://github.com/user-attachments/assets/6bd26d4d-745a-4d56-8801-d198a1e7b605">
+<img width="1512" alt="Screenshot 2024-12-02 at 10 28 54 AM" src="https://github.com/user-attachments/assets/5aa29c9e-ce54-4b4d-95a8-e51ffce6a74d">
+
+- **About me Section**  
+<img width="1512" alt="Screenshot 2024-12-02 at 10 29 06 AM" src="https://github.com/user-attachments/assets/0575ca4f-d67a-4808-ba28-d766f385c395">
+
 
 - **Skills Section**  
-   <img width="1512" alt="Screenshot 2024-11-24 at 10 56 28 AM" src="https://github.com/user-attachments/assets/b4fd7af9-bdd5-4351-b027-f6b5aaa9855a">
+<img width="1512" alt="Screenshot 2024-12-02 at 10 29 18 AM" src="https://github.com/user-attachments/assets/093c83d3-6608-4162-8e51-87c1f00a1b66">
+
 
 - **Projects Section**  
-   <img width="1512" alt="Screenshot 2024-11-24 at 10 56 33 AM" src="https://github.com/user-attachments/assets/49680f3c-ba75-469e-86a8-52ae14dbb8c7">
+<img width="1512" alt="Screenshot 2024-12-02 at 10 29 25 AM" src="https://github.com/user-attachments/assets/ace3d524-711b-4edd-ae73-e0a25ab8506d">
+
 
 ---
 
