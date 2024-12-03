@@ -50,7 +50,6 @@ const isMobile = window.matchMedia('(max-width: 768px)').matches;
 // Apply the appropriate functionality
 if (isMobile) {
     // Mobile: Start the auto-fading cycle
-    document.addEventListener('DOMContentLoaded', startMobileCycle);
 } else {
     // Desktop: Enable hover functionality
     document.addEventListener('DOMContentLoaded', initDesktopHover);
