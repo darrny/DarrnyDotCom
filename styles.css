@@ -428,7 +428,7 @@ html {
   background: #444444;
   color: white;
   transform: translateY(-2px);
-  cursor: alias;
+  cursor: default;
 }
 
 /* Projects Section */
