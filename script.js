@@ -16,11 +16,24 @@ const profilePic = document.querySelector('.profile-pic');
 const profileVideo = document.querySelector('.profile-video');
 const profilePicContainer = document.querySelector('.profile-pic-container');
 
-// Function to check if the device is mobile
-const isMobile = window.matchMedia('(max-width: 768px)').matches;
+// Function to handle the mobile auto-fading cycle
+function startMobileCycle() {
+    // Wait 7 seconds, then fade out the profile picture and play the video
+    setTimeout(() => {
+        profilePicContainer.classList.add('clicked'); // Fade in the video
+        profileVideo.play(); // Start playing the video
 
-// Desktop: Play video on hover
-if (!isMobile) {
+        // When the video ends, fade back to the profile picture and restart the cycle
+        profileVideo.addEventListener('ended', () => {
+            profilePicContainer.classList.remove('clicked'); // Fade in the profile picture
+            profileVideo.currentTime = 0; // Reset video to the start
+            startMobileCycle(); // Restart the cycle
+        }, { once: true }); // Ensure this event only triggers once per cycle
+    }, 7000); // Wait for 7 seconds before switching to the video
+}
+
+// Function to initialize desktop hover functionality
+function initDesktopHover() {
     profilePicContainer.addEventListener('mouseenter', () => {
         profileVideo.play(); // Start playing the video
     });
@@ -31,18 +44,14 @@ if (!isMobile) {
     });
 }
 
-// Mobile: Handle click event on profile picture and video
-if (isMobile) {
-    // Handle click event on the profile picture
-    profilePic.addEventListener("click", () => {
-        profilePicContainer.classList.add('clicked'); // Add 'clicked' class to show the video
-        profileVideo.play(); // Start playing the video
-    });
+// Check if the device is mobile or desktop
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-    // Handle click event on the video
-    profileVideo.addEventListener("click", () => {
-        profilePicContainer.classList.remove('clicked'); // Remove 'clicked' class to show the profile picture again
-        profileVideo.pause(); // Pause the video
-        profileVideo.currentTime = 0; // Reset the video to the beginning
-    });
+// Apply the appropriate functionality
+if (isMobile) {
+    // Mobile: Start the auto-fading cycle
+    document.addEventListener('DOMContentLoaded', startMobileCycle);
+} else {
+    // Desktop: Enable hover functionality
+    document.addEventListener('DOMContentLoaded', initDesktopHover);
 }

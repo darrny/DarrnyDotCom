@@ -415,18 +415,20 @@ html {
 }
 
 .skill-tag {
-  background: #dddddd;
-  color: #dddddd;
-  padding: 0.25rem 0.75rem;
-  border-radius: 16px;
+  background: #333333;
+  color: #eeeeee;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: #eeeeee;
-  transform: translateY(-1px);
+  background: #444444;
+  color: white;
+  transform: translateY(-2px);
+  cursor: alias;
 }
 
 /* Projects Section */
@@ -515,22 +517,6 @@ html {
 
 .project-links:hover{
   color: #eeeeee
-}
-
-.skill-tag {
-  background: #333333;
-  color: #eeeeee;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.skill-tag:hover {
-  background: #444444;
-  color: white;
-  transform: translateY(-2px);
 }
 
 .view-all-container {
