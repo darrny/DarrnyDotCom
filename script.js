@@ -27,7 +27,7 @@ function startMobileCycle() {
         profileVideo.addEventListener('ended', () => {
             profilePicContainer.classList.remove('clicked'); // Fade in the profile picture
             profileVideo.currentTime = 0; // Reset video to the start
-            startMobileCycle(); // Restart the cycle
+            startMobileCycle(); // Restart the cycle 
         }, { once: true }); // Ensure this event only triggers once per cycle
     }, 7000); // Wait for 7 seconds before switching to the video
 }

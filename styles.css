@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -52,22 +51,22 @@ html {
 @media (min-width: 769px) {
   /* Hero Section */
   .hero {
-    display: flex; /* Flexbox for centering */
+    display: flex; 
     flex-direction: row;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    padding: 8rem 2rem; /* Add some padding */
-    background: #000000; /* Ensure background matches your design */
-    min-height: 100vh; /* Full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    padding: 8rem 2rem; 
+    background: #000000; 
+    min-height: 100vh; 
     position: relative;
     overflow: hidden;
   }
 
   .hero-content {
-      display: flex; /* Align content horizontally */
+      display: flex; 
       flex-direction: row;
-      align-items: center; /* Center horizontally */
-      gap: 1rem; /* Space between items */
+      align-items: center; 
+      gap: 1rem;
   }
 
   .hero-text {
@@ -96,7 +95,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Ensure no elements overflow the circular container */
+    overflow: hidden;
   }
 
   .profile-pic {
@@ -106,8 +105,8 @@ html {
       box-shadow: 0 10px 20px #222222;
       mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
       -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-      transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth opacity and scale transition */
-      z-index: 2; /* Ensure it appears above the video initially */
+      transition: opacity 0.5s ease, transform 0.5s ease; 
+      z-index: 2;
   }
 
   .profile-video {
@@ -118,18 +117,18 @@ html {
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      transition: opacity 0.5s ease; /* Smooth opacity transition for the video */
-      opacity: 0; /* Start hidden */
-      z-index: 1; /* Video remains below the image initially */
+      transition: opacity 0.5s ease; 
+      opacity: 0; 
+      z-index: 1;
   }
 
   .profile-pic-container:hover .profile-pic {
-      opacity: 0; /* Smoothly fade out the image */
+      opacity: 0; 
   }
 
   .profile-pic-container:hover .profile-video {
-      opacity: 1; /* Smoothly fade in the video */
-      z-index: 2; /* Ensure the video is visible above the fading image */
+      opacity: 1; 
+      z-index: 2; 
   }
 
   .cta-buttons {
@@ -193,76 +192,76 @@ html {
 
 .btn {
   padding: 0.5rem 2rem;
-  border: none; /* Remove borders */
+  border: none;
   font-weight: 500;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   font-size: 1rem;
-  background: none; /* Remove background */
-  color: #ffffff; /* White text */
-  cursor: pointer; /* Indicate it's clickable */
-  text-decoration: none; /* Remove underline */
+  background: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Primary button: no background or border */
 .primary-btn {
-  color: #ffffff; /* White text */
+  color: #ffffff;
   background: none;
   border: none;
   text-decoration: none;
 }
 
 .primary-btn:hover {
-  color: #cccccc; /* Subtle text color change on hover */
-  transform: translateY(-1px); /* Slight hover effect */
+  color: #cccccc;
+  transform: translateY(-1px);
 }
 
 .primary-btn:active {
-  color: #aaaaaa; /* Darker text on active */
-  transform: scale(0.98); /* Shrink effect when clicked */
+  color: #aaaaaa;
+  transform: scale(0.98);
 }
 
 /* Secondary button: no background or border */
 .secondary-btn {
-  color: #ffffff; /* White text */
+  color: #ffffff;
   background: none;
   border: none;
   text-decoration: none;
 }
 
 .secondary-btn:hover {
-  color: #cccccc; /* Subtle text color change on hover */
-  transform: translateY(-1px); /* Slight hover effect */
+  color: #cccccc;
+  transform: translateY(-1px);
 }
 
 .secondary-btn:active {
-  color: #aaaaaa; /* Darker text on active */
-  transform: scale(0.98); /* Shrink effect when clicked */
+  color: #aaaaaa;
+  transform: scale(0.98);
 }
 
 /* About Me Section */
 #about-me {
-  padding: 8rem 2rem; /* Add spacing around the section */
-  background: #000000; /* Slightly lighter black background for contrast */
+  padding: 8rem 2rem;
+  background: #000000;
 }
 
 .about-me-content {
   max-width: 90%;
   margin: 0 auto;
-  color: #eeeeee; /* Subtle text color */
+  color: #eeeeee;
   line-height: 1.8;
 }
 
 .about-me-content p {
   margin-bottom: 2rem;
   font-size: 1.1rem;
-  color: #cccccc; /* Subtle paragraph text color */
+  color: #cccccc;
 }
 
 .about-me-content h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #ffffff; /* White headings */
+  color: #ffffff;
 }
 
 .coursework-list,
@@ -270,55 +269,55 @@ html {
   list-style: none;
   padding: 0;
   margin-bottom: 2rem;
-  display: grid; /* Enable grid layout */
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; /* Add space between columns */
+  gap: 1rem;
 }
 
 .coursework-list li,
 .hackathon-list li {
   padding: 0.5rem 0;
   position: relative;
-  color: #dddddd; /* Subtle list item color */
+  color: #dddddd;
   font-size: 1rem;
 }
 
 .coursework-list a {
-  color: #dddddd; /* Subtle text color */
-  text-decoration: none; /* Remove underline */
+  color: #dddddd;
+  text-decoration: none;
   display: inline-block;
   padding: 0.2rem 0;
   transition: color 0.3s ease;
 }
 
 .coursework-list a:hover {
-  color: #ffffff; /* Hover effect to change color */
-  text-decoration: underline; /* Optional: Underline on hover */
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* Experiences Section */
 #experiences {
-  padding: 8rem 2rem; /* Add spacing around the section */
-  background: #000000; /* Slightly lighter black background for contrast */
+  padding: 8rem 2rem;
+  background: #000000;
 }
 
 .experience-content {
   max-width: 90%;
   margin: 0 auto;
-  color: #eeeeee; /* Subtle text color */
+  color: #eeeeee;
   line-height: 1.8;
 }
 
 .experience-content p {
   margin-bottom: 2rem;
   font-size: 1.1rem;
-  color: #cccccc; /* Subtle paragraph text color */
+  color: #cccccc;
 }
 
 .experience-content h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #ffffff; /* White heading */
+  color: #ffffff;
 }
 
 
@@ -327,35 +326,34 @@ html {
   list-style: none;
   padding: 0;
   margin-bottom: 3rem;
-  display: flex; /* Use flexbox for dynamic width */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 1rem; /* Add space between chips */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .skill-tag {
-  background: #333333; /* Dark background for tags */
-  color: #ffffff; /* White text */
+  background: #333333;
+  color: #ffffff;
   padding: 0.3rem 1rem;
-  border-radius: 20px; /* Rounded corners */
-  font-size: 0.9rem; /* Smaller text for skills */
+  border-radius: 20px;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: background 0.3s ease;
-  display: inline-block; /* Ensures tags only take as much width as the content */
-  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .skill-tag:hover {
-  background: #444444; /* Slightly lighter background on hover */
+  background: #444444;
 }
 
 @media (max-width: 768px) {
-  /* On smaller screens, make skills list a single column */
   .skills-list {
-    flex-direction: row; /* Stack items vertically on smaller screens */
+    flex-direction: row;
   }
 }
 
-/*Skills Section Styles */
+/* Skills Section Styles */
 #skills {
   padding: 8rem 2rem;
   background: #000000;
@@ -383,7 +381,7 @@ html {
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* Added space between icon and text */
+  gap: 0.75rem;
 }
 
 .skill-card ul {
@@ -411,7 +409,7 @@ html {
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0 1.5rem 1.5rem;
-  color: #555555
+  color: #555555;
 }
 
 .skill-tag {
@@ -433,8 +431,8 @@ html {
 
 /* Projects Section */
 #projects-section {
-  padding: 8rem 2rem; /* Ensures that the section starts with some padding */
-  scroll-margin-top: 120px; /* Adjust the scroll position to align better when clicked */
+  padding: 8rem 2rem;
+  scroll-margin-top: 120px;
 }
 
 .projects-grid {
@@ -445,15 +443,14 @@ html {
   margin-top: 4rem;
 }
 
-/* Horizontal layout for desktops/landscape mode */
 @media (min-width: 769px) {
   .projects-grid {
-    flex-direction: row; /* Align items horizontally */
+    flex-direction: row;
   }
 
   .project-card {
-    flex: 1 1 calc(30% - 2rem); /* Adjust width while maintaining gaps */
-    max-width: 30%; /* Prevents items from growing too large */
+    flex: 1 1 calc(30% - 2rem);
+    max-width: 30%;
   }
 }
 
@@ -462,7 +459,7 @@ html {
   overflow: hidden;
   transition: all 0.3s ease;
   background: #222222;
-  padding-top: 0.75rem; /* Adds space at the top of the card */
+  padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
@@ -471,26 +468,26 @@ html {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   background: #2a2a2a;
   transition: transform 0.3s ease;
-
 }
 
 .project-img {
   width: 95%;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 1.6 / 1;
   object-fit: cover;
   object-position: center;
   margin: 0 auto;
   transition: transform 0.3s ease;
   display: block;
-  border-radius: 12px; /* Adds rounded corners to the image */
+  border-radius: 12px;
 }
 
 .project-card:hover .project-img {
-  transform: scale(1.02); /* Zooms in slightly on hover */
+  transform: scale(1.02);
 }
 
 .project-card h3 {
   padding: 1.5rem 1.5rem 0.5rem;
+  text-decoration: none;
   color: #eeeeee;
   font-size: 1.5rem;
   font-weight: 600;
@@ -498,6 +495,7 @@ html {
 
 .project-card p {
   padding: 0 1.5rem 1.5rem;
+  text-decoration: none;
   color: #dddddd;
   font-size: 1rem;
   line-height: 1.6;
@@ -510,13 +508,13 @@ html {
   gap: 0.5rem;
 }
 
-.project-links a{
-  text-decoration: none; /* Remove underline */
-  color: #cccccc
+.project-links a {
+  text-decoration: none;
+  color: #cccccc;
 }
 
-.project-links:hover{
-  color: #eeeeee
+.project-links:hover {
+  color: #eeeeee;
 }
 
 .view-all-container {
@@ -534,7 +532,7 @@ html {
   font-size: 1rem;
   display: inline-block;
   transition: all 0.3s ease;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   box-shadow: 0 2px 16px #dddddd26;
 }
 
@@ -552,27 +550,25 @@ html {
 /* Contact Section */
 #contact {
   padding: 6rem 2rem;
-  text-align: center; /* Added to center the heading */
+  text-align: center;
 }
 
 .contact-container {
   background: #333333;
   border-radius: 16px;
   position: relative;
-  max-width: 300px;  /* Reduced from 400px */
-  padding: 1rem 2rem;  /* Reduced from 2rem 3rem */
+  max-width: 300px;
+  padding: 1rem 2rem;
   width: 70%;
-  margin: 2rem auto 0; /* Added margin-top to create space below heading */
+  margin: 2rem auto 0;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
-  padding: 0.2rem 0; /* Reduced padding */
-  gap: 1.5rem; /* Default spacing between icons */
+  padding: 0.2rem 0;
+  gap: 1.5rem;
 }
-
-/* Social Links */
 
 .contact-item {
   margin: 0 1rem;
@@ -588,197 +584,22 @@ html {
 
 footer {
   text-align: center;
-  font-size: 0.7rem; /* Adjust font size as needed */
+  font-size: 0.7rem;
   color: #eeeeee;
-  padding: 2rem 1rem; /* Add some spacing for clarity */
-  background-color: #000000; /* Optional: Add a background color for contrast */
-  margin-top: 2rem; /* Add space above the footer */
+  padding: 2rem 1rem;
+  background-color: #000000;
+  margin-top: 2rem;
 }
 
 footer::before {
   content: '';
   display: block;
-  width: 80%; /* Adjust width of the divider */
+  width: 80%;
   height: 1px;
-  background: #dddddd; /* Light gray divider color */
-  margin: 0 auto 1rem; /* Center the divider and add spacing below */
+  background: #dddddd;
+  margin: 0 auto 1rem;
 }
 
 footer p {
   margin: 0;
-}
-
-@media (max-width: 768px) {
-  /* Stack the logo and nav links vertically */
-  #desktop-nav {
-    flex-direction: row; /* Stack logo and nav links in a column for mobile */
-    align-items: center;
-    padding: 7px;
-  }
-
-  /* buttons */
-  .cta-buttons {
-    gap: 0.6rem; /* Slightly smaller gap for mobile view */
-    display: grid;
-    justify-content: center;
-  }
-
-  .primary-btn, .secondary-btn {
-    font-size: 0.8rem; /* Reduce font size */
-    padding: 0.7rem 1.5rem; /* Adjust padding for smaller font */
-    width: 200px;
-  }
-
-  /* Hero Section */
-  .hero {
-    padding: 5rem 2rem 4rem;
-    background: #000000;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    width: 300px;
-    height: 300px;
-    top: -80px;
-    left: -100px;
-  }
-
-  .hero::after {
-    width: 200px;
-    height: 200px;
-    bottom: 80px;
-    right: -80px;
-  }
-
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures all content in hero-text is centered */
-    text-align: center;
-    color: #FFFFFF;
-    width: 100%;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.0rem; /* Smaller font size for mobile */
-    font-weight: 700;
-    letter-spacing: -1px;
-  }
-
-  /* Profile Picture Container */
-  .profile-pic-container {
-    order: -1;
-    margin-bottom: 2.5rem;
-    position: relative; /* Necessary for overlaying the video */
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer; /* Indicate that it's clickable */
-  }
-
-  .profile-pic {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px #222222;
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 2; /* Ensure it appears above the video initially */
-  }
-
-  /* Profile Video */
-  .profile-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Circular border like profile picture */
-    object-fit: cover; /* Ensure the video covers the whole area */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease;
-    z-index: 1; /* Video stays below the image initially */
-  }
-
-  /* When clicked, show the video */
-  .profile-pic-container.clicked .profile-pic {
-    opacity: 0; /* Fade out the profile picture */
-  }
-
-  .profile-pic-container.clicked .profile-video {
-    opacity: 1; /* Fade in the video */
-    z-index: 2; /* Bring the video above the profile picture */
-  }
-
-  .lead {
-    font-size: 0.8rem;
-    color: #AAAAAA;
-    margin-bottom: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .contact-info {
-    gap: 1rem; /* Reduce spacing between icons for mobile view */
-    padding: 0.2rem 0; /* Adjust padding as needed */
-  }
-
-  .social-links {
-    gap: 0.8rem; /* Reduce gap between icons in the social links for mobile */
-    margin-top: 1.5rem; /* Optional: Adjust top margin for better layout */
-  }
-
-  .social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .scroll-indicator {
-    bottom: 1rem;  /* Slightly higher on mobile */
-  }
-
-  .scroll-indicator i {
-      font-size: 1.5rem;  /* Smaller icon on mobile */
-  }
-  
-  .btn {
-    padding: 0.8rem 1.5rem;
-  }
-  /* Ensure proper layout on smaller screens (e.g., mobile) */
-
-  .coursework-list,
-  .hackathon-list {
-    grid-template-columns: 1fr; /* Stack items in a single column on small screens */
-  }
-  
-  .projects-grid {
-    flex-direction: column; /* Align items vertically */
-  }
-
-  .project-card {
-    background: #222222;
-    padding: 1.0rem 0.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 0px solid #cccccc;
-    margin-bottom: 2rem;
-  }
-  
-  .contact-info {
-    padding: 0.5rem;
-  }
 }
