@@ -60,7 +60,6 @@ The portfolio site is designed to be simple yet functional, with the following f
 - **JavaScript**: For smooth scrolling and interactive elements.
 - **AOS**: For scroll-triggered animations and effects.
 - **Font Awesome**: For social media icons and project-related icons.
-- **Firebase**: Backend tool used in some of my projects for real-time database management (used in projects like **BrainBuddies**).
 
 ---
 
