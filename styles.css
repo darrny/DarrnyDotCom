@@ -103,7 +103,7 @@ html {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      box-shadow: 0 10px 20px #222222;
+      box-shadow: 0 10px 20px #111111;
       mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
       -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
       transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth opacity and scale transition */
@@ -321,111 +321,31 @@ html {
   color: #ffffff; /* White heading */
 }
 
-
-/* Skills List */
-.skills-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 3rem;
-  display: flex; /* Use flexbox for dynamic width */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 1rem; /* Add space between chips */
+#skills-section {
+  padding: 8rem 2rem; /* Add spacing around the section */
+  background: #000000; /* Slightly lighter black background for contrast */
 }
-
-.skill-tag {
-  background: #333333; /* Dark background for tags */
-  color: #ffffff; /* White text */
-  padding: 0.3rem 1rem;
-  border-radius: 20px; /* Rounded corners */
-  font-size: 0.9rem; /* Smaller text for skills */
-  font-weight: 500;
-  transition: background 0.3s ease;
-  display: inline-block; /* Ensures tags only take as much width as the content */
-  white-space: nowrap; /* Prevent text from breaking into multiple lines */
-}
-
-.skill-tag:hover {
-  background: #444444; /* Slightly lighter background on hover */
-}
-
-@media (max-width: 768px) {
-  /* On smaller screens, make skills list a single column */
-  .skills-list {
-    flex-direction: row; /* Stack items vertically on smaller screens */
-  }
-}
-
-/*Skills Section Styles */
-#skills {
-  padding: 8rem 2rem;
-  background: #000000;
-}
-
-.skill-card {
-  background: #222222;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  border: 0px solid #cccccc;
-  margin-bottom: 2rem;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.skill-card h3 {
-  color: #FFFFFF;
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem; /* Added space between icon and text */
-}
-
-.skill-card ul {
-  list-style: none;
-  padding-left: 2rem;
-  margin: 0;
-}
-
-.skill-card li {
-  position: relative;
-  padding: 0.5rem 0;
-  color: #eeeeee;
-}
-
-.skill-card li::before {
-  content: "•";
-  color: #ffffff;
-  position: absolute;
-  left: -1rem;
-}
-
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0 1.5rem 1.5rem;
+  padding: 0rem 1rem 1rem;
   color: #555555
 }
 
 .skill-tag {
-  background: #333333;
+  background: #101010;
   color: #eeeeee;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: #444444;
+  background: #222222;
   color: white;
   transform: translateY(-2px);
   cursor: default;
@@ -458,35 +378,26 @@ html {
 }
 
 .project-card {
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  background: #222222;
-  padding-top: 0.75rem; /* Adds space at the top of the card */
-  padding-bottom: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  background: #2a2a2a;
-  transition: transform 0.3s ease;
-
-}
 
 .project-img {
-  width: 95%;
-  aspect-ratio: 1.6 / 1;
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
   object-fit: cover;
   object-position: center;
   margin: 0 auto;
   transition: transform 0.3s ease;
   display: block;
-  border-radius: 12px; /* Adds rounded corners to the image */
+  border-color: #ffffff;
+  border-width: 100px;
+  border-radius: 38px;
+  padding: 1rem;
 }
 
 .project-card:hover .project-img {
-  transform: scale(1.02); /* Zooms in slightly on hover */
+  transform: scale(1.05);
 }
 
 .project-card h3 {
@@ -526,8 +437,6 @@ html {
 
 .view-all-btn {
   padding: 1rem 2rem;
-  background: #333333;
-  color: white;
   font-weight: 500;
   border-radius: 16px;
   letter-spacing: 0.5px;
@@ -535,18 +444,19 @@ html {
   display: inline-block;
   transition: all 0.3s ease;
   text-decoration: none; /* Remove underline */
-  box-shadow: 0 2px 16px #dddddd26;
+  color: #ffffff; /* White text */
+  background: none;
+  border: none;
 }
 
 .view-all-btn:hover {
-  transform: translateY(-2px);
-  background: #444444;
+  color: #cccccc; /* Subtle text color change on hover */
+  transform: translateY(-1px); /* Slight hover effect */
 }
 
 .view-all-btn:active {
-  background: #222222;
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(0.98);
+  color: #aaaaaa; /* Darker text on active */
+  transform: scale(0.98); /* Shrink effect when clicked */
 }
 
 /* Contact Section */
@@ -556,8 +466,7 @@ html {
 }
 
 .contact-container {
-  background: #333333;
-  border-radius: 16px;
+  background: none;
   position: relative;
   max-width: 300px;  /* Reduced from 400px */
   padding: 1rem 2rem;  /* Reduced from 2rem 3rem */
@@ -576,14 +485,19 @@ html {
 
 .contact-item {
   margin: 0 1rem;
-  color: #bbbbbb;
+  color: #dddddd;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
 }
 
 .contact-item:hover {
-  color: #eeeeee;
-  transform: scale(1.1);
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+.contact-item:active {
+  color: #aaaaaa;
+  transform: scale(0.98);
 }
 
 footer {
@@ -693,7 +607,7 @@ footer p {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: 0 10px 20px #222222;
+    box-shadow: 0 10px 20px #111111;
     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -769,12 +683,7 @@ footer p {
   }
 
   .project-card {
-    background: #222222;
     padding: 1.0rem 0.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 0px solid #cccccc;
     margin-bottom: 2rem;
   }
   
