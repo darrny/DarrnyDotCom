@@ -206,15 +206,15 @@ html {
 
 /* Primary button: no background or border */
 .primary-btn {
-  color: #ffffff; /* White text */
+  color: #dddddd; /* White text */
   background: none;
   border: none;
   text-decoration: none;
 }
 
 .primary-btn:hover {
-  color: #cccccc; /* Subtle text color change on hover */
-  transform: translateY(-1px); /* Slight hover effect */
+  color: #ffffff; /* Subtle text color change on hover */
+  transform: scale(1.1); /* Shrink effect when clicked */
 }
 
 .primary-btn:active {
@@ -222,17 +222,16 @@ html {
   transform: scale(0.98); /* Shrink effect when clicked */
 }
 
-/* Secondary button: no background or border */
 .secondary-btn {
-  color: #ffffff; /* White text */
+  color: #dddddd; /* White text */
   background: none;
   border: none;
   text-decoration: none;
 }
 
 .secondary-btn:hover {
-  color: #cccccc; /* Subtle text color change on hover */
-  transform: translateY(-1px); /* Slight hover effect */
+  color: #ffffff; /* Subtle text color change on hover */
+  transform: scale(1.1); /* Shrink effect when clicked */
 }
 
 .secondary-btn:active {
@@ -288,12 +287,19 @@ html {
   text-decoration: none; /* Remove underline */
   display: inline-block;
   padding: 0.2rem 0;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .coursework-list a:hover {
   color: #ffffff; /* Hover effect to change color */
-  text-decoration: underline; /* Optional: Underline on hover */
+  transform: scale(1.05); /* Slightly larger on hover */
+  transition: transform color 0.3s ease;
+}
+
+.coursework-list a:active {
+  color: #aaaaaa; /* Hover effect to change color */
+  transform: scale(0.98); /* Slightly larger on hover */
+  transition: transform color 0.3s ease;
 }
 
 /* Experiences Section */
@@ -347,8 +353,12 @@ html {
 .skill-tag:hover {
   background: #222222;
   color: white;
-  transform: translateY(-2px);
+  transform: scale(1.05);
   cursor: default;
+}
+
+.skill-tag:active {
+  transform: scale(0.95);
 }
 
 /* Projects Section */
@@ -381,24 +391,26 @@ html {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .project-img {
   width: 100%;
-  aspect-ratio: 1.5 / 1;
+  aspect-ratio: 1.4 / 1;
   object-fit: cover;
   object-position: center;
   margin: 0 auto;
   transition: transform 0.3s ease;
   display: block;
-  border-color: #ffffff;
-  border-width: 100px;
   border-radius: 38px;
   padding: 1rem;
 }
 
-.project-card:hover .project-img {
+.project-img:hover {
   transform: scale(1.05);
 }
+
+.project-img:active {
+  transform: scale(0.98);
+}
+
 
 .project-card h3 {
   padding: 1.5rem 1.5rem 0.5rem;
@@ -421,15 +433,6 @@ html {
   gap: 0.5rem;
 }
 
-.project-links a{
-  text-decoration: none; /* Remove underline */
-  color: #cccccc
-}
-
-.project-links:hover{
-  color: #eeeeee
-}
-
 .view-all-container {
   text-align: center;
   margin-top: 2rem;
@@ -444,15 +447,14 @@ html {
   display: inline-block;
   transition: all 0.3s ease;
   text-decoration: none; /* Remove underline */
-  color: #ffffff; /* White text */
+  color: #dddddd; /* White text */
   background: none;
   border: none;
 }
 
 .view-all-btn:hover {
-  color: #cccccc; /* Subtle text color change on hover */
-  transform: translateY(-1px); /* Slight hover effect */
-}
+  color: #ffffff; /* Subtle text color change on hover */
+  transform: scale(1.1); /* Shrink effect when clicked */}
 
 .view-all-btn:active {
   color: #aaaaaa; /* Darker text on active */
