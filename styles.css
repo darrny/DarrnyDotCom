@@ -393,7 +393,7 @@ html {
 
 .project-img {
   width: 100%;
-  aspect-ratio: 1.4 / 1;
+  aspect-ratio: 1.57 / 1;
   object-fit: cover;
   object-position: center;
   margin: 0 auto;
