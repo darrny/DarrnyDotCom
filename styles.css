@@ -399,8 +399,11 @@ html {
   margin: 0 auto;
   transition: transform 0.3s ease;
   display: block;
-  border-radius: 38px;
-  padding: 1rem;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.6rem;
 }
 
 .project-img:hover {
