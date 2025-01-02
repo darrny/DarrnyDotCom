@@ -56,7 +56,7 @@ The portfolio site is designed to be simple yet functional, with the following f
 
 ## **Technologies Used 🖥️**
 
-- **HTML/CSS**: For creating the structure and styling of the website.
+- **React**: For creating the structure and styling of the website.
 - **JavaScript**: For smooth scrolling and interactive elements.
 - **AOS**: For scroll-triggered animations and effects.
 - **Font Awesome**: For social media icons and project-related icons.
