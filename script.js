@@ -1,56 +1,110 @@
-/* Toggle mobile menu */
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-}
-
-document.querySelector('.scroll-indicator').addEventListener('click', function() {
-    const aboutSection = document.getElementById('about-me');
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-// Get the video element and profile picture container
-const profilePic = document.querySelector('.profile-pic');
-const profileVideo = document.querySelector('.profile-video');
-const profilePicContainer = document.querySelector('.profile-pic-container');
+// Navbar transparency effect on scroll
+const nav = document.querySelector('.glass-nav');
+let lastScroll = 0;
 
-// Function to handle the mobile auto-fading cycle
-function startMobileCycle() {
-    // Wait 7 seconds, then fade out the profile picture and play the video
-    setTimeout(() => {
-        profilePicContainer.classList.add('clicked'); // Fade in the video
-        profileVideo.play(); // Start playing the video
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        nav.style.opacity = '1';
+    }
+    
+    if (currentScroll > lastScroll && currentScroll > 50) {
+        nav.style.opacity = '0.8';
+    } else {
+        nav.style.opacity = '1';
+    }
+    
+    lastScroll = currentScroll;
+});
 
-        // When the video ends, fade back to the profile picture and restart the cycle
-        profileVideo.addEventListener('ended', () => {
-            profilePicContainer.classList.remove('clicked'); // Fade in the profile picture
-            profileVideo.currentTime = 0; // Reset video to the start
-            startMobileCycle(); // Restart the cycle 
-        }, { once: true }); // Ensure this event only triggers once per cycle
-    }, 7000); // Wait for 7 seconds before switching to the video
-}
+// Initialize typing effect when document loads
+document.addEventListener('DOMContentLoaded', () => {
+    const typingText = "Hi, I'm Darren!";
+    const typingElement = document.querySelector('.typing-text');
+    let i = 0;
 
-// Function to initialize desktop hover functionality
-function initDesktopHover() {
-    profilePicContainer.addEventListener('mouseenter', () => {
-        profileVideo.play(); // Start playing the video
+    function typeWriter() {
+        if (i < typingText.length) {
+            // Add a zero-width space after the cursor to maintain consistent width
+            typingElement.innerHTML = typingText.substring(0, i + 1) + '<span class="cursor">|</span>';
+            i++;
+            setTimeout(typeWriter, 100);
+        } else {
+            // Remove the cursor when typing is complete
+            typingElement.textContent = typingText;
+            
+            // Start blinking cursor with a separate span
+            setInterval(() => {
+                const cursor = typingElement.querySelector('.cursor');
+                if (cursor) {
+                    cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+                } else {
+                    typingElement.innerHTML = typingText + '<span class="cursor">|</span>';
+                }
+            }, 500);
+        }
+    }
+
+    // Start typing effect
+    typeWriter();
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
     });
+}, observerOptions);
 
-    profilePicContainer.addEventListener('mouseleave', () => {
-        profileVideo.pause(); // Pause the video when hover ends
-        profileVideo.currentTime = 0; // Optional: Reset to the start
-    });
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// Typing effect for hero text
+const heroText = "I dance and I code.";
+const leadParagraph = document.querySelector('.lead');
+let i = 0;
+
+function typeWriter() {
+    if (i < heroText.length) {
+        leadParagraph.textContent = heroText.substring(0, i + 1);
+        i++;
+        setTimeout(typeWriter, 100);
+    }
 }
 
-// Check if the device is mobile or desktop
-const isMobile = window.matchMedia('(max-width: 768px)').matches;
+// Start typing effect when page loads
+window.addEventListener('load', () => {
+    typeWriter();
+});
 
-// Apply the appropriate functionality
-if (isMobile) {
-    // Mobile: Start the auto-fading cycle
-} else {
-    // Desktop: Enable hover functionality
-    document.addEventListener('DOMContentLoaded', initDesktopHover);
-}
+// Scroll indicator
+document.querySelector('.scroll-indicator').addEventListener('click', () => {
+    const aboutSection = document.getElementById('about');
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+});
