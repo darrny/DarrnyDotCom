@@ -10,10 +10,10 @@ const Portfolio = () => {
     };
 
     // Common section title class for consistency
-    const sectionTitleClass = "text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-metallic-200 via-metallic-400 to-metallic-200 bg-clip-text text-transparent";
+    const sectionTitleClass = "text-3xl md:text-4xl font-bold text-center mb-16 text-white";
 
     return (
-        <main className="bg-gray-950 text-gray-100">
+        <main className="bg-black text-gray-100">
 
             {/* Hero Section */}
             <section className="h-screen flex flex-col justify-center items-center">
@@ -28,14 +28,14 @@ const Portfolio = () => {
                     </p>
                     <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">
                         <button
-                            className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-metallic-700 to-metallic-800 hover:from-metallic-600 hover:to-metallic-700 rounded-lg transition-all transform hover:scale-105 hover:shadow-[0_0_15px_rgba(203,208,217,0.2)]"
+                            className="w-48 flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all transform hover:scale-105 hover:shadow-lg"
                             onClick={() => window.open('/assets/resume.pdf', '_blank')}
                         >
                             <Download size={20} />
                             Download CV
                         </button>
                         <button
-                            className="flex items-center justify-center gap-2 px-6 py-3 border border-metallic-600 hover:bg-metallic-800/50 rounded-lg transition-all transform hover:scale-105 hover:shadow-[0_0_15px_rgba(203,208,217,0.1)]"
+                            className="w-48 flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all transform hover:scale-105 hover:shadow-lg"
                             onClick={() => window.location.href = 'mailto:darren.lim.off@gmail.com'}
                         >
                             <Mail size={20} />
@@ -56,10 +56,11 @@ const Portfolio = () => {
                 <div className="container mx-auto max-w-6xl px-4">
                     <h2 className={sectionTitleClass}>About Me</h2>
                     <div className="max-w-3xl mx-auto text-metallic-300 space-y-6">
-                        <p className="text-lg" data-aos="fade-up">
-                            I'm a Year 2 Computer Science student at the <span className="text-metallic-200">National University of Singapore (NUS)</span>.
-                            Here's my journey so far.
-                        </p>
+                        <div className="flex justify-center items-center">
+                            <p className="text-lg" data-aos="fade-up" style={{ textAlign: 'center', width: '100%' }}>
+                                I'm a Software Engineer based in <span className="text-metallic-200">Singapore</span>. Here's my journey so far.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
